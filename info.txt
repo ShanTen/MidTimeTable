@@ -1,0 +1,8 @@
+References:  C:\jojo\work\devWork\cruder\nodejs-express-mysql\html
+
+
+Make "interactive notepad" so a server and client component.
+
+First make table making server and layout of main index.html
+
+Use hyper if you want as a UI framework
