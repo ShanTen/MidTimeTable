@@ -1,0 +1,106 @@
+/*General Styling for elements*/
+
+*{
+    color: rgb(255, 255, 255);
+    /* background-color:black; */
+}
+
+body
+{
+    /* background-color:rgb(255, 255, 255);
+    color:rgb(24, 23, 23); */
+    background-image:url(./backgroundImages/SimpleXOpastel.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+textarea {
+    color:black;
+    font-family: 'Roboto';
+    background-color:#ed996f;
+
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
+  }
+
+h1{
+    text-align:center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+    color: rgb(213, 113, 19);
+}
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.centerIT {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/*Section Only For Grid Items Below*/
+
+.grid 
+{
+    border-spacing: 10px;
+}
+
+.grid td 
+{
+    background-color:#f7f79d;
+    color: black; 
+    font-family: 'Roboto Condensed', sans-serif;
+    border-radius: 6px;
+
+    cursor:pointer;
+    width:100px; height:40px;
+    text-align:center;
+    vertical-align:middle;
+    user-select: none;
+    font-size:17px;
+    transition: 0.15s;
+}
+
+.grid td:hover {
+    transform: scale(1.1);
+    background-color: #f9a31a
+}
+/* 
+.grid td:active {
+    background-color: #f79800
+} */
+
+
+.grid th
+{
+    /* border:4px solid rgb(255, 255, 255); */
+    background-color:#757ca5;
+    font-family: 'Antic', sans-serif;
+    
+    border-radius: 10px;
+    font-size:17px;
+    
+
+    cursor:pointer;
+    width:200px; height:40px;
+    text-align:center;
+    vertical-align:middle;
+}
+
+.grid td.clicked 
+{
+    background-color:#f79800;
+    color:blue;
+}

@@ -1,8 +1,45 @@
 References:  C:\jojo\work\devWork\cruder\nodejs-express-mysql\html
-
-
 Make "interactive notepad" so a server and client component.
-
 First make table making server and layout of main index.html
-
 Use hyper if you want as a UI framework
+
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,TIME,08.00-8.50,8.50 -9.40,9.50-10.40,10.40-11.30,12.30-01.20,12.20-01.10,01.10-02.00,02.00-02.50,02.50-03.40
+,,PERIOD,1,2,3,4,Lunch ,5,6,7,8
+Mon, EEE,Math,Mech Workshop,Mech Workshop,Lunch ,Mech Workshop,Mech Workshop,Chemistry,
+Tue,Chemistry,Math,Biology,EEE,Lunch ,Phil of Engg,,,
+Wed,Yoga,Japanese,Chemistry Lab,,Lunch ,Math,Chemistry,Biology,
+Thu,Phil of Engg,Phil of Engg,Chemistry ,Math,Lunch ,EEE,,,
+Fri,Prof Skills and Pracs ,Prof Skills and Pracs ,Japanese,Japanese,Lunch ,Value Added Course,Value Added Course,EEE,
+
+###################Logs #################################
+12:32 AM 05-11-2022 - In the morning, I finished up table making based off static data I have on UI side but now I wanna work on styling it a little before going to sleep and working on back end tomororow and
+11:20 AM 05-11-2022 - Finished basic structure 
+#########################################################
+
+Ideas:
+On DblClick - Create Note 
+Server Side Notes Storage for a day 
+Dark theme/light theme/color theme toggle
+
+ToDo:
+Document on Github 
+clean up code
+
+Doing:
+
+
+Done:
+Notes Part
+Add Server Side To Handle Data Change
+Separate JS from index.html 
+Make sharp rectangles blunt 
+Center the Time table (Vertical)[Jank Solution]
+Figure out some central theme
+Add dark theme light theme
+Make UI Reactive 
+Clean up styling 
+Add nice text
