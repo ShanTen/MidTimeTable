@@ -1,3 +1,8 @@
+function getNote(cellNumber)
+{
+    return localStorage.getItem(`notes${cellNumber}`);
+}
+
 //using the top element identified by 'theGrid'	, this function
 //inserts child <TR> and <TD> elements to create a rectangular grid
 //each element has an id of the pattern 'cell<N>' where N is a flat one dimensional index
@@ -44,6 +49,12 @@ function createClickableTRTDGrid(numRows, numCols, tto,clickFunction) {
             //robustness: if json had some wrong or null elements, simply show '' without fuss or exceptions.
             if (timetableObject.cellTopics[r] && timetableObject.cellTopics[r][c]) { tdElement.innerHTML = timetableObject.cellTopics[r][c]; }
             else { tdElement.innerHTML = ''; }
+
+			//CORNERNOTE:
+			//set a small corner fold indicator if the cell contains a note
+			//dont use toggle because we also want to any possible fix inconsistent states.
+			if(getNote(cellNumber)) tdElement.classList.add("foldTopLeft");
+			else tdElement.classList.remove("foldTopLeft");
 
 			tdElement.addEventListener(
                 'click',
@@ -146,10 +157,24 @@ function Main(){
             createClickableTRTDGrid(sizeX, sizeY, res.data,clickAction);        
 
             // save changes event handler: saves to localStorage under the key 'notes<N>'
-            notesElement.addEventListener("input", e => {
-                if(lastClickedCellnr)
-                    localStorage.setItem(`notes${lastClickedCellnr}`, notesElement.value);
-                });
+	notesElement.addEventListener("input", e => {
+		if(lastClickedCellnr && lastClickedElement)
+			{
+			let text = notesElement.value;
+			text=text.trim() ;
+			localStorage.setItem(`notes${lastClickedCellnr}`, text);
+			if(text)
+				{
+				lastClickedElement.classList.add("foldTopLeft");
+				console.log("setting corner style");
+				}
+			else
+				{
+				lastClickedElement.classList.remove("foldTopLeft");
+				console.log("clearing corner stle");
+				}
+			}
+		});
         }
 
     }).catch((err) => {

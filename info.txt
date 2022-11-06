@@ -18,12 +18,10 @@ Fri,Prof Skills and Pracs ,Prof Skills and Pracs ,Japanese,Japanese,Lunch ,Value
 ###################Logs #################################
 12:32 AM 05-11-2022 - In the morning, I finished up table making based off static data I have on UI side but now I wanna work on styling it a little before going to sleep and working on back end tomororow and
 11:20 AM 05-11-2022 - Finished basic structure 
+01:34 PM 06-11-2022 - I want to not exist 
 #########################################################
 
 Ideas:
-On DblClick - Create Note 
-Server Side Notes Storage for a day 
-Dark theme/light theme/color theme toggle
 
 ToDo:
 Document on Github 
@@ -43,3 +41,6 @@ Add dark theme light theme
 Make UI Reactive 
 Clean up styling 
 Add nice text
+On DblClick - Create Note 
+Server Side Notes Storage for a day 
+Dark theme/light theme/color theme toggle

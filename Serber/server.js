@@ -16,35 +16,23 @@ function readJSONandReturnObject(filename){
     }
 }
 
-function writeJSONwithObject(filename, object){
-    try {
-        fs.writeFileSync(filename, JSON.stringify(object))
-    } catch (err) {
-        console.error(err);
-    }
-}
 /*Handle CORS (I want to KMS)*/
 
 var pathToTimeTable = './timeTable.json';
-
-
 var corsOptions= { 
-    origin:["http://127.0.0.1:3000/*"]//serve ip+port
+    origin:["http://127.0.0.1:3000/*", "http://localhost:5000/"]//serve ip+port
 }
-
-app.all('/*', function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    next();
-});
 
 app.use(cors(corsOptions));
 
 /*RESTful Part*/
 
 app.get('/', (req, res) =>{
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+
     var returnObj = readJSONandReturnObject(pathToTimeTable);
-    console.log(returnObj);
+    console.log(`Got a request`)
     res.json(returnObj)
 })
 
